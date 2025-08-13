@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Peluquería Estilo Unico</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script defer src="../js/peluqueria.js"></script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <img src="../medios/logo.jpg" alt="Logo" class="logo" />
+    <h1>Contacto</h1>
+  </header>
+
+  <!-- nav -->
+  <nav>
+    <a href="../index.html">Inicio</a>
+    <a href="./servicios.html">Servicios</a>
+    <a href="./nosotros.html">Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <!-- main -->
+  <main class="container contacto">
+    <h2>Estamos aquí para ti</h2>
+    <form id="formulario-contacto" novalidate>
+      <label for="nombre">Tu nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+      
+      <label for="email">Tu correo</label>
+      <input type="email" id="email" name="email" placeholder="Tu correo" required />
+      
+      <label for="mensaje">Tu mensaje</label>
+      <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+      
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <!-- Mensajes dinámicos del formulario -->
+    <div id="salida-contacto"></div>
+
+    <div class="contact-info">
+      <p>📍 Calle Ficticia 123, Ciudad</p>
+      <p>📞 123-456-7890</p>
+      <p>📧 contacto@estilounico.com</p>
+    </div>
+
+    <div class="redes-sociales">
+      <h3>Seguinos en redes:</h3>
+      <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">TikTok</a>
+    </div>
+
+    <div id="mapa">
+      <!-- Mapa Google Maps -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.324103352631!2d-58.38159268478114!3d-34.60373818045918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac5d92063b1%3A0x6b3d7750b85840ae!2sObelisco%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1691542349156!5m2!1ses-419!2sar"
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <p>&copy; 2025 Peluquería Estilo Unico - Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
