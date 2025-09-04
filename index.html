@@ -4,28 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Peluquería Estilo Unico: Corte, tintes y peinados profesionales en tu ciudad. Reserva tu turno hoy." />
-  
-  <title>Peluquería Estilo Unico</title>
-  
+
+  <title>Peluquería Estilo Único</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="./css/style.css" />
+
   <!-- JS -->
   <script defer src="./js/peluqueria.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
 
   <!-- Contenedor para saludo -->
   <div id="saludo" style="text-align:center; margin:1rem 0; font-weight:bold; color:#ff4081;"></div>
 
-  <!-- header -->
+  <!-- Encabezado -->
   <header class="header">
     <img src="./medios/logo.jpg" alt="Logo Peluquería" class="logo" />
-    <h1>Estilo Unico</h1>
+    <h1>Estilo Único</h1>
     <p>Donde tu belleza comienza</p>
     <a href="./pages/servicios.html" class="btn">Ver Servicios</a>
   </header>
 
-  <!-- nav -->
+  <!-- Navegación -->
   <nav>
     <ul>
       <li><a href="./pages/servicios.html">Servicios</a></li>
@@ -34,14 +37,14 @@
     </ul>
   </nav>
 
-  <!-- promocion -->
+  <!-- Promoción -->
   <section class="seccion">
     <h2>¡Promoción de Agosto!</h2>
     <p class="promo">Reservá hoy y obtené un <strong>10% de descuento</strong> en tu primer corte.</p>
-    <img src="./medios/promos.jpg" alt="promo">
+    <img src="./medios/promos.jpg" alt="Promo de Agosto">
   </section>
 
-  <!-- por que elegirnos -->
+  <!-- ¿Por qué elegirnos? -->
   <section class="seccion">
     <h2>¿Por qué elegirnos?</h2>
     <ul class="valores">
@@ -52,32 +55,32 @@
     </ul>
   </section>
 
-  <!-- lista de servicios disponibles -->
+  <!-- Lista de servicios disponibles -->
   <section class="seccion">
     <h2>Servicios Disponibles</h2>
     <div id="lista-servicios-disponibles"></div>
   </section>
 
-  <!-- cliente -->
+  <!-- Cliente ejemplo -->
   <section class="seccion">
     <h2>Presentación Cliente Ejemplo</h2>
     <div id="presentacion-cliente" style="font-style: italic; color: #666;"></div>
   </section>
 
-  <!-- precios con IVA y servicios -->
+  <!-- Precios con IVA -->
   <section class="seccion">
     <h2>Precios y Servicios</h2>
     <p id="precios-iva"></p>
     <p id="servicios-caros"></p>
   </section>
 
-  <!-- cargados async -->
+  <!-- Simulación de API -->
   <section class="seccion">
     <h2>Servicios desde API simulada</h2>
     <div id="servicios-async"></div>
   </section>
 
-  <!-- testimonios -->
+  <!-- Testimonios -->
   <section class="seccion testimonios">
     <h2>Lo que dicen nuestras clientas</h2>
     <div class="testimonio">
@@ -90,35 +93,38 @@
     </div>
   </section>
 
-  <!-- equipo -->
+  <!-- Equipo -->
   <section class="seccion">
     <h2>Conocé a nuestro equipo</h2>
     <div class="equipo">
       <div class="miembro">
-        <img src="./medios/sofia.jpg" alt="Estilista 1" />
+        <img src="./medios/sofia.jpg" alt="Sofía - Estilista" />
         <h3>Sofía</h3>
         <p>Especialista en cortes y peinados</p>
       </div>
       <div class="miembro">
-        <img src="./medios/Martin2.jpg" alt="Estilista 2" />
+        <img src="./medios/Martin2.jpg" alt="Martín - Colorista" />
         <h3>Martín</h3>
         <p>Colorista profesional</p>
       </div>
     </div>
   </section>
 
-  <!-- redes -->
+  <!-- Redes sociales -->
   <section class="seccion">
     <h2>Seguinos en redes</h2>
     <p>Encontrá más estilos, tips y promociones en nuestras redes sociales.</p>
     <div class="redes">
-      <a href="#">Instagram</a> | <a href="#">Facebook</a> | <a href="#">TikTok</a>
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href="#">TikTok</a>
     </div>
   </section>
 
-  <!-- footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Peluquería Estilo Único - Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>

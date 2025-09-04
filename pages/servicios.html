@@ -1,58 +1,51 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios | Peluquería Estilo Unico</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <script defer src="../js/peluqueria.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios | Peluquería Estilo Único</title> <!-- Estilos -->
+    <link rel="stylesheet" href="../css/style.css" /> <!-- Scripts -->
+    <script defer src="../js/peluqueria.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body>
-
-  <!-- header -->
-  <header>
-    <img src="../medios/logo.jpg" alt="Logo" class="logo" />
-    <h1>Servicios</h1>
-  </header>
-
-  <!-- nav -->
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="#">Servicios</a>
-    <a href="./nosotros.html">Nosotros</a>
-    <a href="./contactos.html">Contacto</a>
-  </nav>
-
-  <!-- main -->
-  <main class="container">
-    <h2>¿Qué ofrecemos?</h2>
-
-    <section class="servicios">
-      <article class="servicio">
-        <img src="../medios/corte1.jpg" alt="Corte de cabello" />
-        <h3>Corte de Cabello</h3>
-        <p>Cortes modernos, clásicos, infantiles y más. ¡Estilo para todos!</p>
-      </article>
-
-      <article class="servicio">
-        <img src="../medios/coloracion.jpg" alt="Tinte" />
-        <h3>Tinte</h3>
-        <p>Amplia variedad de colores y técnicas: balayage, mechas, fantasía.</p>
-      </article>
-
-      <article class="servicio">
-        <img src="../medios/peinados.jpg" alt="Peinados" />
-        <h3>Peinados</h3>
-        <p>Peinados para bodas, fiestas y eventos especiales. ¡Luce increíble!</p>
-      </article>
-    </section>
-  </main>
-
-  <!-- footer -->
-  <footer>
-    <p>&copy; 2025 Peluquería Estilo Unico - Todos los derechos reservados.</p>
-  </footer>
+<body> <!-- Header -->
+    <header> <img src="../medios/logo.jpg" alt="Logo de la peluquería" class="logo" />
+        <h1>Servicios</h1>
+    </header> <!-- Navegación -->
+    <nav aria-label="Menú principal">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./contactos.html">Contacto</a></li>
+        </ul>
+    </nav> <!-- Contenido Principal -->
+    <main class="container">
+        <h2>¿Qué ofrecemos?</h2>
+        <section class="servicios">
+            <article class="servicio"> <img src="../medios/corte1.jpg" alt="Corte de cabello" />
+                <h3>Corte de Cabello</h3>
+                <p>Cortes modernos, clásicos, infantiles y más. ¡Estilo para todos!</p>
+            </article>
+            <article class="servicio"> <img src="../medios/coloracion.jpg" alt="Coloración de cabello" />
+                <h3>Tinte</h3>
+                <p>Amplia variedad de colores y técnicas: balayage, mechas, fantasía.</p>
+            </article>
+            <article class="servicio"> <img src="../medios/peinados.jpg" alt="Peinados profesionales" />
+                <h3>Peinados</h3>
+                <p>Peinados para bodas, fiestas y eventos especiales. ¡Luce increíble!</p>
+            </article>
+        </section> <!-- Servicios generados dinámicamente -->
+        <section class="seccion">
+            <h2>Catálogo de Servicios</h2>
+            <div id="lista-servicios"></div>
+        </section>
+    </main> <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Peluquería Estilo Único - Todos los derechos reservados.</p>
+    </footer>
 </body>
+
 </html>

@@ -1,49 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nosotros | Peluquería Estilo Unico</title>
+  <title>Nosotros | Peluquería Estilo Único</title>
   <link rel="stylesheet" href="../css/style.css" />
   <script defer src="../js/peluqueria.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
 
-  <!-- header -->
+  <!-- Header -->
   <header>
     <img src="../medios/logo.jpg" alt="Logo" class="logo" />
     <h1>Sobre Nosotros</h1>
   </header>
 
-  <!-- nav -->
-  <nav>
-    <a href="../index.html">Inicio</a>
-    <a href="./servicios.html">Servicios</a>
-    <a href="#">Nosotros</a>
-    <a href="./contactos.html">Contacto</a>
+  <!-- Navegación -->
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="./servicios.html">Servicios</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="./contactos.html">Contacto</a></li>
+      <li><a href="./carrito.html">Carrito</a></li>
+    </ul>
   </nav>
 
-  <!-- main -->
+  <!-- Carrito actual en página -->
+  <section id="ver-carrito-en-nosotros" class="seccion">
+    <h2>Carrito Actual</h2>
+    <ul id="carrito-nosotros"></ul>
+    <p id="total-nosotros"></p>
+  </section>
+
+  <!-- Contenido principal -->
   <main class="container">
     <h2>Una historia de estilo y pasión</h2>
     <img src="../medios/nosotros2.jpg" alt="tijeras">
 
     <p>
-      Fundada en 2015, Peluquería Estilo Unico nació del sueño de ofrecer un espacio donde la gente pudiera encontrar su mejor versión.
+      Fundada en 2015, Peluquería Estilo Único nació del sueño de ofrecer un espacio donde la gente pudiera encontrar su mejor versión.
       Nuestro equipo de profesionales está en constante capacitación, brindando los últimos estilos y tendencias con un toque personalizado.
     </p>
 
     <p>
-      Creemos que cada cliente es Unico, por eso nos esforzamos en ofrecer atención cálida, asesoramiento y productos de alta calidad.
+      Creemos que cada cliente es único, por eso nos esforzamos en ofrecer atención cálida, asesoramiento y productos de alta calidad.
     </p>
+
     <img src="../medios/nosotros1.jpg" alt="barba">
   </main>
 
-  <!-- footer -->
+  <!-- Productos para agregar al carrito -->
+  <section class="productos seccion">
+    <h2>Productos para el Cuidado del Cabello</h2>
+
+    <div class="producto">
+      <img src="../medios/istockphoto-1415223875-612x612.jpg" alt="Shampoo" />
+      <h3>Shampoo Hidratante</h3>
+      <p>$1.200</p>
+      <button onclick="agregarAlCarrito('Shampoo Hidratante', 1200)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="../medios/crema hombre.jpg" alt="Crema" />
+      <h3>Crema para Peinar</h3>
+      <p>$3.500</p>
+      <button onclick="agregarAlCarrito('Crema para Peinar', 3500)">Agregar al carrito</button>
+    </div>
+
+    <div class="producto">
+      <img src="../medios/chica poniendose aceite en el pelo.jpg" alt="Aceite" />
+      <h3>Aceite Reparador</h3>
+      <p>$4.500</p>
+      <button onclick="agregarAlCarrito('Aceite Reparador', 4500)">Agregar al carrito</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Peluquería Estilo Unico - Todos los derechos reservados.</p>
+    <p>&copy; 2025 Peluquería Estilo Único - Todos los derechos reservados.</p>
   </footer>
+
 </body>
 </html>

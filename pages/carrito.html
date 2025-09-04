@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de Compras | Estilo Único</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <!-- encabezado -->
+  <header>
+    <img src="../medios/logo.jpg" alt="Logo" class="logo" />
+    <h1>Carrito de Compras</h1>
+  </header>
+
+  <!-- main -->
+  <nav>
+    <ul>
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="./servicios.html">Servicios</a></li>
+      <li><a href="./nosotros.html">Nosotros</a></li>
+      <li><a href="./contactos.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <section id="carrito-contenido">
+      <h2>Tu Carrito</h2>
+      <ul id="lista-carrito" class="lista-carrito"></ul>
+      <p id="total-carrito" class="total-carrito"></p>
+      <button id="vaciar-carrito" class="btn">Vaciar carrito</button>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Peluquería Estilo Único - Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script principal del carrito -->
+  <script>
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalCarrito = document.getElementById("total-carrito");
+    const btnVaciar = document.getElementById("vaciar-carrito");
+
+    function cargarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      listaCarrito.innerHTML = "";
+
+      if (carrito.length === 0) {
+        listaCarrito.innerHTML = "<li>Tu carrito está vacío.</li>";
+        totalCarrito.textContent = "";
+        return;
+      }
+
+      let total = 0;
+      carrito.forEach(producto => {
+        const li = document.createElement("li");
+        li.textContent = `${producto.nombre} - $${producto.precio}`;
+        listaCarrito.appendChild(li);
+        total += producto.precio;
+      });
+
+      totalCarrito.textContent = `Total a pagar: $${total}`;
+    }
+
+    btnVaciar.addEventListener("click", () => {
+      Swal.fire({
+        title: '¿Estás seguro?',
+        text: "Se vaciará tu carrito de compras.",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Sí, vaciar',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.removeItem("carrito");
+          cargarCarrito();
+          Swal.fire('Carrito vacío', 'Tu carrito ha sido vaciado.', 'success');
+        }
+      });
+    });
+
+    // Cargar al abrir la página
+    cargarCarrito();
+  </script>
+</body>
+</html>
